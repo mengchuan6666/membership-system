@@ -1,0 +1,76 @@
+/** 全局样式 */
+@use 'element-plus/theme-chalk/src/mixins/function.scss' as *;
+@use './transition.scss' as *;
+
+html {
+  overflow: auto;
+  overflow: overlay;
+}
+
+body {
+  margin: 0;
+  line-height: 1.58;
+  color: getCssVar('text-color', 'regular');
+  font-size: getCssVar('font-size', 'base');
+  font-family: getCssVar('font-family');
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
+  min-width: 1200px;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+/* 色弱模式 */
+.ele-admin-weak {
+  filter: invert(0.8);
+}
+
+/* 按钮加图标减少间距 */
+.ele-btn-icon.el-button,
+.ele-btn-icon.el-button.is-round {
+  padding-left: 10px;
+  padding-right: 12px;
+
+  &.el-button--small {
+    padding-left: 5px;
+    padding-right: 6px;
+  }
+
+  &.el-button--large {
+    padding-left: 14px;
+    padding-right: 16px;
+  }
+}
+
+/* 级联选择器增加高度 */
+.ele-popper-higher .el-cascader-menu__wrap.el-scrollbar__wrap {
+  height: 280px;
+}
+
+/* 间距组件样式优化 */
+.el-space--horizontal > .el-space__item:last-child {
+  margin-right: 0 !important;
+}
+
+.el-space--vertical > .el-space__item:last-child {
+  padding-bottom: 0 !important;
+}
+
+/* echarts */
+.echarts > div {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* 阿里巴巴普惠体 */
+@font-face {
+  font-family: 'AliPuHui';
+  font-weight: 300;
+  src: url('//at.alicdn.com/wf/webfont/jWZHcEP2lzge/5AfKUTWZEo8W.woff2')
+      format('woff2'),
+    url('//at.alicdn.com/wf/webfont/jWZHcEP2lzge/Dvhs41TtRdYF.woff')
+      format('woff');
+  font-display: swap;
+}

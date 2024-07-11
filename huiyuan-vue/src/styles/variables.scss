@@ -1,0 +1,89 @@
+/** ElementPlus样式变量修改 */
+@use 'element-plus/theme-chalk/src/mixins/function.scss' as *;
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #1677ff
+    ),
+    'success': (
+      'base': #52c41a
+    ),
+    'warning': (
+      'base': #faad14
+    ),
+    'danger': (
+      'base': #f5222d
+    ),
+    'error': (
+      'base': #f5222d
+    )
+  ),
+  $text-color: (
+    'primary': rgba(0, 0, 0, 1),
+    'regular': rgba(0, 0, 0, 0.88),
+    'secondary': rgba(0, 0, 0, 0.6),
+    'placeholder': rgba(0, 0, 0, 0.4),
+    'disabled': rgba(0, 0, 0, 0.3)
+  ),
+  $border-color: (
+    '': #d9d9d9,
+    'light': #e0e0e0,
+    'lighter': #e8e8e8,
+    'extra-light': #f0f0f0,
+    'dark': #424242,
+    'darker': #303030
+  ),
+  $fill-color: (
+    '': #f5f5f5,
+    'light': #f7f7f7,
+    'lighter': #fafafa,
+    'extra-light': #fcfcfc,
+    'dark': #ebedf0,
+    'darker': #e6e8eb,
+    'blank': #ffffff
+  ),
+  $bg-color: (
+    '': #ffffff,
+    'page': #f0f2f5,
+    'overlay': #ffffff
+  ),
+  $box-shadow: (
+    '': (
+      0 2px 10px 2px rgba(0, 0, 0, 0.1)
+    ),
+    'light': (
+      0 6px 16px 0 rgba(0, 0, 0, 0.08),
+      0 3px 6px -4px rgba(0, 0, 0, 0.12),
+      0 9px 28px 8px rgba(0, 0, 0, 0.05)
+    ),
+    'lighter': (
+      0 1px 2px 0 rgba(0, 0, 0, 0.03),
+      0 1px 6px -1px rgba(0, 0, 0, 0.02),
+      0 2px 4px 0 rgba(0, 0, 0, 0.02)
+    ),
+    'dark': (
+      0 6px 16px 0 rgba(0, 0, 0, 0.08),
+      0 3px 6px -4px rgba(0, 0, 0, 0.12),
+      0 9px 28px 8px rgba(0, 0, 0, 0.05)
+    )
+  ),
+  $datepicker: (
+    'inrange-bg-color': getCssVar('color-primary', 'light-9'),
+    'inrange-hover-bg-color': getCssVar('color-primary', 'light-8')
+  ),
+  $message: (
+    'padding': 12px 16px,
+    'close-size': 14px,
+    'close-icon-color': getCssVar('text-color', 'secondary'),
+    'close-hover-color': getCssVar('text-color', 'regular')
+  ),
+  $radio: (
+    'input-width': 15px,
+    'input-height': 15px
+  ),
+  $checkbox: (
+    'input-width': 15px,
+    'input-height': 15px
+  )
+);
